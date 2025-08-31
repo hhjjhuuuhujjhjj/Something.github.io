@@ -1,0 +1,40 @@
+questions = ["which app i use the most?", "which one is my fav food?", "which one is my ideal col?", "which one i will choose ?", "what kind of personality mine?"]
+options = [
+    ["A.insta", "B.yt", "C.whatsapp", "D.snap"],
+    ["A.pizza", "B.curd", "C.noodles", "D.chicken"],
+    ["A.red", "B.black", "C.yellow", "D.green"],
+    ["A.money", "B.dress", "C.clips", "D.study"],
+    ["A.red", "B.green", "C.white", "D.black"]
+]
+answers = ["B", "C", "B", "A", "A"]
+guesses = []
+score = 0
+question_num = 0
+
+for question_num in range(len(questions)):
+    print("__________")
+    print(questions[question_num])
+    for option in options[question_num]:
+        print(option)
+    guess = input("enter(A,B,C,D): ").upper()
+    guesses.append(guess)
+    if guess == answers[question_num]:
+        score += 1
+        print("CORRECT")
+    else:
+        print("INCORRECT")
+        print(f"the correct answer is {answers[question_num]}")
+    question_num += 1  # Note: This line is redundant with the for loop, but included as per your handwriting
+
+print("__________")
+print("RESULT")
+print("answers:", end=" ")
+for answer in answers:
+    print(answer, end=" ")
+print("\nguesses:", end=" ")
+for guess in guesses:
+    print(guess, end=" ")
+print()
+
+score_percentage = (score / len(questions)) * 100
+print(f"Your score is: {score_percentage}%")
