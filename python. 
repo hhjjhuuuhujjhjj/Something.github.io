@@ -44,5 +44,26 @@ _______second program __________import random
 # random.shuffle(cards)
 #print(cards)
 
+_____________________number guessing ___________programm_________
+import random
+low = 1
+high = 100
+guesses = 0
+number = random.randint(low, high)
+while True:
+        guess = int(input(f"enter a number ({low}-{high}):"))
+        guesses += 1
+        
+        if guess <  number:
+        	print(f"{guess} is too low")
+        elif guess > number:
+       	 print(f"{guess} is too high")
+        else:
+       	 print(f"{guess} is correct🎁")
+       	 break
+print( )
+print(f"this round took you {guesses} guesses")
+
+
 
   
