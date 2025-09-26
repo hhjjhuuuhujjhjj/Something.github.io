@@ -1,0 +1,32 @@
+#consession stand program
+print("WELCOME TO MY SHOPE")
+menu = {"pizza"  :   60,
+                  "nan"     :   15,
+                  "chiken":   90,
+                   "soda"  :   50,
+                  "beer"    :   120,
+                  "beef"    :    700}
+                  
+cart = []
+total = 0
+print("______< MENU>_______") 
+for key , value in menu.items():
+     print(f"{key :40} {value:}rupees") 
+print("______________________")   
+while True:
+    food = input("Select an item (q to quit): ").lower()
+    if food == "q":
+        break
+    elif menu.get(food) is not None:
+        cart.append(food)
+print(cart)
+print("______YOUR ORDER_____")
+for food in cart:
+      total +=menu.get(food)
+      print(food, end=" ")
+print( )
+
+print(f"total is :{total}rupees")
+print("ORDER SUCESSFULL ")
+
+  
