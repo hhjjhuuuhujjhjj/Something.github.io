@@ -1,3 +1,4 @@
+7
 ___my first GUI ______
 puting colour in background and length and title 
 1>>>>...
@@ -9,3 +10,27 @@ window.config(background ="green")
 window.mainloop()
 __________________________________
 2>>>>....
+
+#label
+
+from tkinter import *
+
+window = Tk()
+
+photo = PhotoImage(file="/storage/emulated/0/Download/IMG_20250928_130241.png")
+
+label = Label(window,
+              text="do you want to code",
+              font=("Arial",10, "bold"),
+              fg="pink",
+              bg="green",
+              padx=20,
+              pady=10,
+              image=photo,
+              compound="bottom")
+label.pack()
+
+window.mainloop()
+
+3>>>>....... 
+
