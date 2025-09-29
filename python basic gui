@@ -1,4 +1,4 @@
-7
+no7
 ___my first GUI ______
 puting colour in background and length and title 
 1>>>>...
@@ -90,6 +90,12 @@ label.pack( )
 label2 = Label(window,image = image)
 button.pack()
 window.mainloop()
+
+
+
+
+4>>>>........
+
 
 
 
