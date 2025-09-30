@@ -257,9 +257,48 @@ window.mainloop()
 
 7>>>>........
 
+______python colour choose gui _____
 
 
+from tkinter import *
+from tkinter import colorchooser #submodule
+def click():
+	color = colorchooser.askcolor()
+	if color[1]is not None :#check if user picked a colour 
+		colorHex = color[1]
+		window.config(bg = colorHex)
 
+
+window = Tk()
+window.geometry("420x420")
+button = Button(text = "click me" , command = click)
+button.pack()
+window.mainloop()
+
+
+8>>>>........
+__________python text widgets gui _______
+#text widgt = function likes a text area , you can enter multiple area of text 
+from tkinter import*
+
+def submit ():
+	input = text.get("1.0",END)
+	print(input)
+window = Tk()
+text = Text(window,
+                       bg ="light yellow",
+                       fg = "purple",
+                       padx = 20,
+                       pady = 20,
+                       height = 10,
+                       width = 20,
+                       font = ("bold",20))
+text.pack()
+button = Button (window , text ="submit",command = submit)
+button.pack()
+window.mainloop()
+
+9>>>>........
 
 
 
