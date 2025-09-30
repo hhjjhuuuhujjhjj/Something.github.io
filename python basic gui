@@ -1,4 +1,4 @@
-no7
+tno7
 ___my first GUI ______
 puting colour in background and length and title 
 1>>>>...
@@ -95,6 +95,69 @@ window.mainloop()
 
 
 4>>>>........
+tkinter gui checkboxs in python 
+
+
+
+
+
+from tkinter import *
+from PIL import Image, ImageTk   # Pillow pip
+
+def display():
+    if x.get()==1 and y.get()==0:
+        print("i like python")
+    elif x.get()==0 and y.get()==1:
+    	print("i like java")
+    elif x.get()==1 and  y.get()==0:
+    	print("i like both")
+    else:
+        print("i dont like either")
+
+window = Tk()
+x = IntVar()
+y = IntVar()
+
+#checkbox for python 
+checkbox = Checkbutton(window, text="python", variable=x,
+                       onvalue=1, offvalue=0, command=display)
+checkbox.pack()
+checkbox.config(font=("Arial", 30))
+checkbox.config(bg="blue")
+checkbox.config(fg="green")
+checkbox.config(activeforeground="yellow")
+checkbox.config(activebackground="red")
+
+# PIL se image resize
+img = Image.open("/storage/emulated/0/Download/Untitled design (3).png")
+img = img.resize((50, 50))   # 
+photo = ImageTk.PhotoImage(img)
+
+checkbox.config(image=photo, compound="left", padx=20, pady=20)
+checkbox.config(anchor = "w")#anchors width relative to cardinal direction
+
+# checkbox for java
+
+checkbox2 = Checkbutton(window, text="java", variable=y,
+                       onvalue=1, offvalue=0, command=display)
+checkbox2.pack()
+checkbox2.config(font=("Arial", 30))
+checkbox2.config(bg="blue")
+checkbox2.config(fg="green")
+checkbox2.config(activeforeground="yellow")
+checkbox.config(activebackground="red")
+
+# PIL se image resize karke lagana
+img = Image.open("/storage/emulated/0/Download/Untitled design (2).png")
+img = img.resize((50, 50))   # yaha size apne hisaab se set kar sakti ho
+photo2 = ImageTk.PhotoImage(img)
+
+checkbox2.config(image=photo2, compound="left", padx=20, pady=20)
+checkbox.config(anchor = "w")#anchors width relative to cardinal direction
+
+
+window.mainloop()
+
 
 
 
