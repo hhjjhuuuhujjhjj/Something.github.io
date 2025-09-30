@@ -1,4 +1,4 @@
-tno7
+
 ___my first GUI ______
 puting colour in background and length and title 
 1>>>>...
@@ -157,6 +157,15 @@ checkbox.config(anchor = "w")#anchors width relative to cardinal direction
 
 
 window.mainloop()
+
+
+
+
+5>>>>........
+
+
+
+
 
 
 
