@@ -221,6 +221,47 @@ window.mainloop()
 6>>>>.....
 
 
+from tkinter import *
+from PIL  import Image, ImageTk #pillow import
+def submit() :
+	print("the temprature is"+str(scale.get())+"degree C")
+
+window = Tk()
+hotimg =Image.open("/storage/emulated/0/Download/Untitled design (7).png").resize((150,150))
+hotimage = ImageTk.PhotoImage(hotimg)
+hotLabel = Label(window,image = hotimage)
+hotLabel.pack()
+scale = Scale(window,
+                            from_ =100,
+                            to = 0,
+                            orient = VERTICAL,
+                            tickinterval = 10 ,#adds numeric indicators for value 
+                            font = ("Arial",20),
+                            resolution = 5 ,#increament of slider 
+                            bg = "black",
+                            fg = "red",
+                            troughcolor = "blue",
+                            length = 600,
+                            width = 70
+                           )
+scale.set((scale['from']-scale['to']/2))        
+scale.pack()    
+coldimg = Image.open( "/storage/emulated/0/Download/Untitled design (8).png").resize((150,150))
+coldimage = ImageTk.PhotoImage(coldimg)
+coldLabel = Label(window,image = coldimage)
+coldLabel.pack()            
+button = Button(window,text = "submit",command = submit)
+button.pack()                           
+                           
+window.mainloop()
+
+7>>>>........
+
+
+
+
+
+
 
 
 
