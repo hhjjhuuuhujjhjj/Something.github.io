@@ -300,6 +300,59 @@ window.mainloop()
 
 9>>>>........
 
+_______opening file in python ______
+
+#opening a file filedialog (tkinter module)
+from tkinter import *
+from tkinter import filedialog
+
+def openfile():
+	filepath = filedialog.askopenfilename(initialdir ="C:users/Cakow/PycharmProjects/Main",
+	title = "open file",
+	filetypes =(("text files","*.txt") ,	                       ("all files","*.*")))
+	if filepath:
+	    with open(filepath,'r' ) as file:
+	    	print(file.read())
+	    	file.close()
+	 
+	
+window = Tk()
+button = Button(window,text="open",command = openfile)
+button.pack()
+window.mainloop()
+
+
+10>>>>,......
+______saving a file in python gui______from tkinter import *
+from tkinter import filedialog
+
+def savefile():
+    file = filedialog.asksaveasfile(
+        defaultextension='.txt',
+        filetypes=[("Text file", "*.txt"),
+                   ("HTML file", "*.html"),
+                   ("All files", "*.*")]
+    )
+    if file is not None:   #if user don't cancel'
+        filetext = str(text.get(1.0, END))
+        file.write(filetext)
+        file.close()
+
+window = Tk()
+
+button = Button(window, text="savefile", command=savefile)
+button.pack()
+
+text = Text(window)
+text.pack()
+
+window.mainloop()
+
+
+
+11>>> ...........
+_____
+
 
 
 
