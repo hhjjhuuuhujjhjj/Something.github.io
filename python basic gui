@@ -393,6 +393,47 @@ window.mainloop()
 
 
 12>>>>..,....,......
+___________gui ( frames) in python _____
+#frames = are a rectangular container to group and hold widgets
+from tkinter import *
+window = Tk()
+window.config(bg = "purple")
+frame = Frame(window,bg = "blue",bd =5)
+frame.pack()
+
+Button(window,text = "s",font=("consolas",20),width = 1,fg ="red").pack(side =BOTTOM)
+Button(window,text = "u",font=("consolas",20),width =1,fg = "red").pack(side =BOTTOM)
+Button(window,text = "p",font=("consolas",20),width =1,fg = "red").pack(side =BOTTOM)
+Button(window,text = "e",font=("consolas",20),width =1,fg = "red").pack(side =BOTTOM)
+Button(window,text = "r",font=("consolas",20),width =1,fg = "red").pack(side =BOTTOM)
+Button(window,text = "s",font=("consolas",20),width =1,fg = "red").pack(side =LEFT)
+Button(window,text = "a",font=("consolas",20),width =1,fg = "red").pack(side =LEFT)
+Button(window,text = "i",font=("consolas",20),width =1,fg = "red").pack(side =LEFT)
+Button(window,text = "y",font=("consolas",20),width =1,fg = "red").pack(side =LEFT)
+Button(window,text = "a",font=("consolas",20),width =1,fg = "red").pack(side =LEFT)
+Button(window,text = "n",font=("consolas",20),width =1,fg = "red").pack(side =LEFT)
+
+window.mainloop()
+
+
+
+13>>>......
+_____________gui ( new window on old window) in python __________________
+from tkinter import *
+def creat_window():
+       new_window = Toplevel()
+       new_window.config(bg = "blue")
+       new_window.title ("new window")
+       
+        
+          #new window on top of other windows linked to the buttom window 
+       #old_window.destroy // it's will destry the old window '
+old_window = Tk()
+Button(old_window,text = "creat new window",command = creat_window).pack()
+old_window.mainloop()
+
+
+14>>>>...........
 ___________
 
 
