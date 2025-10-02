@@ -528,7 +528,62 @@ window.mainloop()
 
 
 16>>>>>.........
-___________
+___________gui( drag and drop)________
+
+
+from tkinter import *
+
+def drag_start(event):
+	widget = event.widget
+	widget.startX = event.x
+	widget.startY = event.y
+def drag_Motion(event):
+	widget =event.widget
+	x =widget.winfo_x()-widget.startX + event.x
+	y =widget.winfo_y()-widget.startY + event.y
+	widget.place(x=x,y=y)
+
+
+window = Tk()
+
+label = Label(window,bg ="red",width =10,height = 5)
+label.place(x=0,y=0)
+label.bind("<Button-1>",drag_start)
+label.bind("<B1-Motion>",drag_Motion)
+
+label2= Label(window,bg ="green",width =10,height = 5)
+label2.place(x=0,y=0)
+label2.bind("<Button-1>",drag_start)
+label2.bind("<B1-Motion>",drag_Motion)
+
+label3 = Label(window,bg ="purple",width =10,height = 5)
+label3.place(x=60,y=60)
+label3.bind("<Button-1>",drag_start)
+label3.bind("<B1-Motion>",drag_Motion)
+
+label4 = Label(window,bg ="yellow",width =10,height = 5)
+label4.place(x=50,y=50)
+label4.bind("<Button-1>",drag_start)
+label4.bind("<B1-Motion>",drag_Motion)
+
+label5 = Label(window,bg ="pink",width =10,height = 5)
+label5.place(x=30,y=30)
+label5.bind("<Button-1>",drag_start)
+label5.bind("<B1-Motion>",drag_Motion)
+
+label6 = Label(window,bg ="blue",width =10,height = 5)
+label6.place(x=10,y=10)
+label6.bind("<Button-1>",drag_start)
+label6.bind("<B1-Motion>",drag_Motion)
+
+
+
+
+window.mainloop()
+
+
+17>>>.......
+_________gui(
 
 
 
