@@ -97,3 +97,46 @@ for x in range (1,11):
 	print()
 print("1","2","3","4","5",sep = "-") # sep  is a keyword
 	
+
+
+
+d-arbitrary arguments 
+
+
+
+#_________ arbitrary arguments ________
+
+#*args = data type (tuple)allows to pass multipne non-key arguments
+#**kwarga(keyword args) = data type (dicitonary) allowa to pass multiple keywords argumentes
+# * unpacking operator 
+
+#________ *args Example-1___________
+#(*args)
+def add (*nums):
+	total = 0 
+	for num in nums :
+		total += num
+	return total
+print(add(1,2,3,4,5))
+
+#________*args Example-2___________
+
+def display_name(*args):
+	print(f"hello",end = " ")
+	for arg in args :
+		print(arg, end = " ")
+display_name("bro","code","!!!")
+print()
+
+#_________ **kwargs Example-1________
+
+
+def print_adress(**kwargs):
+	#for value in kwargs.values():
+	for key ,value in kwargs.items():
+		print(f"{key}:{value}")
+print_adress(country = "india", 
+                           state = "odisha",
+                           post_office = "gaham",
+                           dist = "angul")
+
