@@ -1,0 +1,44 @@
+here we gonna no about arguments in python 
+    a - positional arguments 
+    b - default arguments 
+    c _ keyword arguments 
+    d - arbitrary arguments 
+
+
+
+
+a. positional arguments 
+
+
+
+#______ positional arguments _______
+
+# functions = in python functions are the block of re-useable codes place()after the function name invoke  it 
+
+
+def happy_birthday(name , age):
+	print(f"happy birthday {name}")
+	print(f"you are {age } years  old")
+	print(f"happy birthday to you")
+	print()
+happy_birthday("jubli",18)
+happy_birthday("khusiyo",13)
+happy_birthday("dc",15)
+
+# ______ EXMPLE -1___________
+def data (name , ammount, due_date):
+	print(f"hello  {name}")
+	print(f"your bill of ${ammount:.2f} is due{due_date}")
+	print()
+data("bro",20,"5/12")
+data("arian",45,"6/10")
+
+#_______EXAMPLE-2___________
+ #return = it is a statment use to end function and send a result back to the caller
+
+def create_name(first,last):
+	first = first.capitalize()
+	last = last .capitalize()
+	return first + " " + last
+full_name = create_name("bro","code")
+print(full_name)
