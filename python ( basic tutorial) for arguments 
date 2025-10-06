@@ -1,4 +1,4 @@
-here we gonna no about arguments in python 
+ here we gonna no about arguments in python 
     a - positional arguments 
     b - default arguments 
     c _ keyword arguments 
@@ -74,4 +74,26 @@ def count(end,start = 0):
 count(5,2)
 		
 		#exact last number i need so i did end +1 okay 
+
+
+c- keywords arguments 
+
+
+#_______key-words arguments_______
+
+#keywords arguments = arguments prifixed within the names of parameters ,helps with readability , order of arguments doesn't matter 
+
+#__________Example-1_____________
+
+def hello(greeting , title ,first ,last):
+	print(f"{greeting} {title} {first } {last}")
+hello("hello" ,title = "mr",last =" motoie",first = "alex")
+#always remeber positional arguments (hello ) alwats must be at firat and see here order doesn't matter 
+
+#________ Example-2_____________
+
+for x in range (1,11):
+	print(x, end = " ")
+	print()
+print("1","2","3","4","5",sep = "-") # sep  is a keyword
 	
